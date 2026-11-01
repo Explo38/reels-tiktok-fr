@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "reels-tiktok-fr",
-      "description": "14 skills en français pour Instagram Reels et TikTok, avec voix off locale gratuite.",
+      "description": "17 skills en français pour Instagram Reels et TikTok : studio complet de l'analyse à la programmation, montage vidéo et voix off locale gratuite.",
       "source": "./",
       "category": "productivity"
     }

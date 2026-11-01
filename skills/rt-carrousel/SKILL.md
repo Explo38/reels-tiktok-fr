@@ -94,17 +94,19 @@ DERNIÈRE  DEMANDE     une seule action. Enregistrer, commenter un mot-clé, ou
 ## Construire les fichiers
 
 Instagram veut du 1080x1350 (4:5), JPEG ou PNG, jusqu'à 20 éléments. TikTok veut
-du 1080x1920 (9:16), jusqu'à 35 images. Construis en HTML et imprime chaque
-diapo :
+du 1080x1920 (9:16), jusqu'à 35 images. Le plus simple : le moteur de
+`/rt-montage`, une scène par diapo, sans audio.
 
 ```bash
-# une <section> par diapo, 1080x1350 (Instagram) ou 1080x1920 (TikTok),
-# page-break-after: always
-# puis Chrome headless --print-to-pdf, ou l'outil HTML vers image que tu as déjà
+# storyboard avec "format": {"largeur": 1080, "hauteur": 1350} (TikTok : 1920)
+python3 ../rt-montage/rendre.py carrousel.json --diapos diapos/
 ```
 
-Écris le HTML avec `width:1080px; height:1350px` (ou `height:1920px`), une seule
-couleur d'accent, et un texte jamais plus petit que 32px, parce que tout ça se
+Il garde 120 px de marge sur un carrousel 4:5 et la zone sûre sur du 9:16.
+Sinon, construis en HTML (une `<section>` par diapo) et exporte chaque diapo
+en image avec l'outil que tu as.
+
+Une seule couleur d'accent, et un texte jamais plus petit que 32px, parce que tout ça se
 lit sur un téléphone au tiers de sa taille réelle. Si le projet a un skill de
 marque ou un design system, utilise-le et n'invente pas de palette.
 

@@ -1,0 +1,25 @@
+{
+  "format": {"largeur": 1080, "hauteur": 1920, "fps": 30},
+  "charte": {
+    "fond": "#0F172A",
+    "texte": "#FFFFFF",
+    "texte_sombre": "#0F172A",
+    "accent": "#818CF8",
+    "accent_sombre": "#4F46E5",
+    "police": "",
+    "police_texte": ""
+  },
+  "audio": {
+    "voix": "voix_off.wav",
+    "sous_titres": "voix_off.srt",
+    "musique": "musique.mp3",
+    "volume_musique": 0.15,
+    "incruster_sous_titres": true
+  },
+  "scenes": [
+    {"duree": 2.5, "degrade": ["#1E1B4B", "#4F46E5"], "titre": "2 H -> *10 MIN*", "sous_titre": "par lettre de motivation", "animation": "pop"},
+    {"duree": 4, "image": "assets/capture_accueil.png", "cadre": "telephone", "titre": "Colle l'offre", "position": "haut"},
+    {"duree": 3, "fond": "#EEF2FF", "titre": "On adapte *ton CV*", "sous_titre": "et ta lettre, prêtes pour les filtres ATS", "animation": "monte"},
+    {"duree": 3, "degrade": ["#4F46E5", "#1E1B4B"], "titre": "Essaie *gratuitement*", "sous_titre": "lien en bio", "animation": "monte"}
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "nom": "lancement-novembre",
+  "creee_le": "2026-11-01",
+  "etape": 1,
+  "comptes": {
+    "instagram": "https://www.instagram.com/<compte>/",
+    "tiktok": "https://www.tiktok.com/@<compte>",
+    "veille": ["https://www.tiktok.com/@<compte-de-la-niche>"]
+  },
+  "projet": {
+    "source": "site",
+    "adresse": "https://<site-du-projet>",
+    "lecture_seule": true
+  },
+  "plan": "plan.md",
+  "demande": {
+    "formats": ["video_tiktok", "reel_instagram", "carrousel_instagram"],
+    "nombre_posts": 8,
+    "periode": "2 semaines"
+  },
+  "recette": {
+    "voix": true,
+    "voix_nom": "estelle",
+    "texte_ecran": true,
+    "musique": "fichier",
+    "musique_fichier": "assets/musique.mp3",
+    "captures": true,
+    "sous_titres": true
+  },
+  "publication": {
+    "voie": "A",
+    "jours": ["mardi", "jeudi", "dimanche"],
+    "horaires": "auto"
+  },
+  "posts": [
+    {
+      "id": "post-01",
+      "theme": "Preuve",
+      "format": "video",
+      "plateformes": ["tiktok", "instagram"],
+      "formule": 5,
+      "hook": "Une lettre de motivation me prenait deux heures. Maintenant, dix minutes.",
+      "script": "texte de la voix off ou des cartons, une ligne par plan",
+      "fichiers": {
+        "video": "post-01/post-01.mp4",
+        "couverture": "post-01/couverture.jpg",
+        "storyboard": "post-01/storyboard.json"
+      },
+      "legendes": {
+        "tiktok": "légende TikTok",
+        "instagram": "légende Instagram"
+      },
+      "creneaux": {
+        "tiktok": "2026-11-04 12:30",
+        "instagram": "2026-11-04 18:30"
+      },
+      "etiquette_ia": true,
+      "a_faire": [],
+      "statut": "brouillon",
+      "commentaire": ""
+    }
+  ]
+}

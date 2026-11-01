@@ -1,21 +1,29 @@
 # reels-tiktok-fr
 
-14 skills Claude, en français, pour écrire et piloter du contenu court sur
-Instagram et TikTok. Vidéos face caméra ou sans visage (voix off IA, ou texte à
-l'écran + musique), carrousels, légendes, stories, profil, planning, réponses,
-DM, audit. Gratuit, licence MIT, pas de compte à connecter, pas de clé d'API.
+17 skills Claude, en français, pour produire et piloter du contenu court sur
+Instagram et TikTok. Vidéos face caméra ou sans visage (voix off IA, texte
+animé, musique, captures de ton projet), carrousels, légendes, stories,
+profil, planning, réponses, DM, audit, montage vidéo et programmation.
+Gratuit, licence MIT.
 
-**Rien n'est publié sans toi.** Les skills écrivent. Tu publies.
+**Pour commencer : `/rt-studio`.** Il te pose quelques questions et enchaîne
+tous les autres skills tout seul, de l'analyse de tes comptes jusqu'à la
+programmation des posts.
+
+**Rien n'est publié sans ta validation**, et ton projet reste en lecture seule.
 
 Adapté de [instagram-agent-skill](https://github.com/Jakeschincariol/instagram-agent-skill)
 de Jake Schincariol (licence MIT).
 Cette version est réécrite en français, étendue à TikTok et au contenu sans
 visage, avec une commande de voix off en plus.
 
-## Les 14 commandes
+## Les 17 commandes
 
 | commande | ce qu'elle fait |
 | --- | --- |
+| `/rt-studio` | **Le point d'entrée.** Analyse tes comptes, propose le plan de com, te demande formats et recette motion, capture ton projet en lecture seule, produit tous les posts, sort une planche de validation, puis programme ce que tu as validé. |
+| `/rt-montage` | Fabrique la vidéo MP4 1080x1920 depuis un storyboard (texte animé, captures dans un téléphone, voix, musique, sous-titres) et les diapos des carrousels. Capture ton site et relève sa charte, en lecture seule. |
+| `/rt-publication` | Programme les posts validés sur Instagram et TikTok aux meilleurs horaires : Metricool (connecteur officiel), planificateurs natifs, ou kit manuel. Rien ne part sans ton « oui ». |
 | `/rt-video` | Une idée en vidéo (Reel ou TikTok). Trois hooks parmi 26 formules, notés, puis le script, le texte à l'écran et un minutage par séquence. Face caméra ou sans visage. |
 | `/rt-veille` | Trouve ce qui marche dans ta niche, classe par multiple sur la médiane de chaque compte, nomme la formule, écrit le fichier de veille. |
 | `/rt-legende` | La légende, vérifiée. Montre ce que le fil affiche avant "plus" (environ 125 caractères sur Instagram, 80 à 100 sur TikTok). |
@@ -33,7 +41,7 @@ visage, avec une commande de voix off en plus.
 
 ## Les scripts
 
-Python 3, sans dépendance, sans réseau (sauf la génération de voix, voir plus bas). Ils tournent sur ta machine, sur ton
+Python 3, sans réseau. Sans dépendance, sauf la voix (pocket-tts) et le montage (Pillow, ffmpeg, Playwright pour les captures). Ils tournent sur ta machine, sur ton
 texte. Lance-les depuis le dossier du skill (`skills/rt-video/`, etc.).
 
 ```bash
@@ -57,6 +65,15 @@ python3 veille.py capture.tsv --out ~/.claude/reels-tiktok/veille.md
 
 # rt-video, vidéo sans voix (texte à l'écran + musique)
 python3 minutage.py cartons.txt --lecture --cible 15
+
+# rt-montage (vidéo et diapos ; Pillow + ffmpeg, Playwright pour les captures)
+python3 capturer.py https://ton-site.fr --charte --sortie assets/
+python3 rendre.py storyboard.json --sortie video.mp4 --brouillon
+python3 rendre.py storyboard.json --sortie video.mp4
+python3 rendre.py carrousel.json --diapos diapos/
+
+# rt-studio (planche de validation)
+python3 planche.py ~/.claude/reels-tiktok/campagnes/<campagne>/campagne.json
 
 # rt-voix (voix off locale)
 python3 preparer_texte.py script.txt -o voix.txt --rapport   # chiffres en lettres, sigles, une phrase par ligne
@@ -118,6 +135,11 @@ et il tourne comme un mode. Tu perds les scripts Python (l'essentiel de
 
 ## Tes fichiers : `~/.claude/reels-tiktok/`
 
+Chaque campagne de `/rt-studio` a son dossier `campagnes/<date>-<nom>/` :
+`campagne.json` (l'état de chaque post), `plan.md`, `assets/`, un dossier par
+post, `revue.html` (la planche de validation) et `publication.csv`.
+
+
 | fichier | rôle |
 | --- | --- |
 | `style.md` | ta façon de parler, ton format (face caméra ou sans visage), tes positions, tes preuves. À remplir en premier. |
@@ -132,10 +154,15 @@ style.md à partir de ça". Tous les skills le lisent.
 
 ## Ce que ça ne fait pas
 
-- **Ça ne publie rien.** Pas de connexion à ton compte Instagram ou TikTok, pas
-  de mot de passe, pas de programmation automatique. Chaque skill finit sur un
-  bloc prêt à copier, et c'est toi qui publies (la programmation se fait dans
-  les outils natifs, comme TikTok Studio).
+- **Ça ne publie rien sans ta validation.** `/rt-publication` ne programme que
+  les posts que tu as validés, après un récapitulatif auquel tu dis « oui ». Il
+  passe par un outil officiel (Metricool, avec son connecteur Claude), par les
+  planificateurs natifs (Meta Business Suite, TikTok Studio) ou te donne un kit
+  pour publier toi-même. Jamais de mot de passe saisi, jamais de robot connecté
+  à ton compte.
+- **Ton projet reste en lecture seule.** Captures, couleurs, polices, logo :
+  tout est lu et copié dans le dossier de campagne. Aucun fichier du projet
+  n'est créé, modifié ou supprimé, aucune commande n'y écrit.
 - **Pas de scraping, pas de DM en masse, pas de commentaires automatisés.** Ça
   viole les conditions d'utilisation d'Instagram et de TikTok et ça fait
   restreindre les comptes. Seule exception : les réponses automatiques par

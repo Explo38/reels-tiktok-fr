@@ -1,10 +1,22 @@
 {
   "name": "reels-tiktok-fr",
-  "description": "14 skills en français pour Instagram Reels et TikTok : hooks notés sur 26 formules, conducteur minuté, légendes vérifiées, veille, carrousels, stories, profil, planning, commentaires, réponses, DM, recyclage, audit, humaniseur, et voix off locale gratuite avec sous-titres.",
-  "version": "1.0.0",
+  "description": "17 skills en français pour Instagram Reels et TikTok. /rt-studio enchaîne tout : analyse des comptes, plan de com, production des vidéos motion (texte animé, captures du projet en lecture seule, voix off locale gratuite, sous-titres), carrousels, légendes, planche de validation et programmation des posts validés.",
+  "version": "1.1.0",
   "author": {
     "name": "Adaptation française de instagram-agent-skill (Jake Schincariol)"
   },
   "license": "MIT",
-  "keywords": ["instagram", "tiktok", "reels", "français", "voix off", "tts", "légende", "humaniser"]
+  "keywords": [
+    "instagram",
+    "tiktok",
+    "reels",
+    "français",
+    "voix off",
+    "tts",
+    "légende",
+    "humaniser",
+    "motion",
+    "programmation",
+    "metricool"
+  ]
 }
