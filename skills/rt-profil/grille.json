@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "total": 100,
+  "note": "Douze critères, 100 points, valables pour Instagram et TikTok. Note chaque critère honnêtement : une note généreuse n'aide personne. La plupart des profils tombent entre 30 et 50 au premier passage. La pondération est voulue : le champ nom, la première ligne de bio et les trois épingles valent plus que la photo, parce que c'est ce qu'un inconnu arrivé depuis une seule vidéo lit vraiment avant de décider de s'abonner. Si le compte existe sur les deux plateformes, note chaque profil séparément.",
+  "items": [
+    {
+      "id": "champ_nom",
+      "points": 12,
+      "full_marks": "Le champ nom (la ligne en gras, pas l'identifiant ; 30 caractères sur Instagram, 30 sur TikTok) porte le nom plus ce que la personne fait, avec les mots que les gens tapent dans la recherche : 'Léa Martin | CV et entretiens'. Ce champ est indexé par la recherche des deux applis et la plupart des comptes le gâchent avec un nom seul.",
+      "common_fail": "Un prénom seul, ou un prénom avec un emoji."
+    },
+    {
+      "id": "bio_ligne_1",
+      "points": 12,
+      "full_marks": "La première ligne dit à qui s'adresse le compte et ce qui change pour cette personne, avec ses mots à elle. Pas un intitulé de poste, pas une liste d'adjectifs, pas trois emojis séparés par des barres. Sur TikTok, avec 80 caractères en tout, cette ligne est presque toute la bio.",
+      "common_fail": "'Entrepreneur | Fan de café | Papa de deux chats'."
+    },
+    {
+      "id": "bio_suite",
+      "points": 8,
+      "full_marks": "Le reste de la bio (150 caractères en tout sur Instagram, 80 sur TikTok) porte une preuve ou une offre précise, écrite en phrase et pas en liste séparée par des barres. Sur TikTok, il n'y a souvent la place que pour une demi-ligne : une preuve chiffrée ou un appel clair, pas les deux.",
+      "common_fail": "Une soupe de mots-clés, ou du vide."
+    },
+    {
+      "id": "epingles",
+      "points": 10,
+      "full_marks": "Trois publications épinglées en haut de la grille (3 maximum sur Instagram comme sur TikTok), avec trois rôles différents : la meilleure preuve, l'explication la plus claire de l'offre, la meilleure présentation de la personne ou de la marque. Pas les trois vidéos qui ont fait le plus de vues par hasard.",
+      "common_fail": "Rien d'épinglé, donc le haut de la grille montre la dernière publication, quelle qu'elle soit."
+    },
+    {
+      "id": "lien",
+      "points": 8,
+      "full_marks": "Une seule destination, qui tient la promesse de la bio. Instagram autorise jusqu'à 5 liens ; sur TikTok, le lien en bio dépend du type de compte et du nombre d'abonnés. Dans les deux cas, au-delà de deux liens c'est un menu, et un menu convertit moins bien qu'une porte.",
+      "common_fail": "Un agrégateur de liens avec onze boutons, ou aucun lien."
+    },
+    {
+      "id": "temps_forts",
+      "points": 8,
+      "full_marks": "Instagram : quatre à six temps forts nommés d'après les questions qu'un acheteur se pose (Tarifs, Résultats, Comment ça marche, Qui je suis), couvertures cohérentes, rien de plus vieux qu'un an en tête. TikTok : des playlists si la fonction est disponible sur le compte, nommées de la même façon et rangées par série ; sinon, ce rôle passe aux épingles et le critère se note sur leur cohérence.",
+      "common_fail": "'Divers', 'Vie', 'Coups de cœur', ou 14 temps forts sans ordre. Sur TikTok, des playlists vides ou nommées 'Vidéos 1'."
+    },
+    {
+      "id": "grille_lisible",
+      "points": 8,
+      "full_marks": "Les neuf premières couvertures se lisent en vignette et disent de quoi parle le compte sans un seul tap. Les couvertures sont choisies exprès (Instagram et TikTok permettent toutes deux de choisir l'image et d'ajouter du texte), pas laissées sur la première image. Trois ou quatre mots sur la couverture suffisent. Pour un compte sans visage, le texte de couverture fait tout le travail.",
+      "common_fail": "Neuf couvertures d'un visage en pleine phrase, ou neuf écrans de motion design sans un mot."
+    },
+    {
+      "id": "photo",
+      "points": 6,
+      "full_marks": "Compte personnel : le visage remplit environ 60 % d'un cercle qui s'affiche à environ 40 pixels, yeux visibles, photo de moins de deux ans, fond calme. Compte de marque ou sans visage : un logo simple, lisible à cette taille, sur un fond qui tranche.",
+      "common_fail": "Une photo en pied, un logo pour une marque personnelle, ou un selfie dans une pièce sombre."
+    },
+    {
+      "id": "identifiant",
+      "points": 6,
+      "full_marks": "Lisible, prononçable à voix haute, et identique sur Instagram, TikTok et les autres plateformes. Pas d'underscores empilés ni de chiffres à la place des lettres.",
+      "common_fail": "Un identifiant que personne n'arrive à écrire après l'avoir entendu une fois, ou deux identifiants différents selon l'appli."
+    },
+    {
+      "id": "categorie_contact",
+      "points": 6,
+      "full_marks": "Instagram : compte professionnel avec une catégorie qui correspond à l'offre et des boutons de contact qui marchent. TikTok : compte entreprise si le contact par e-mail et les statistiques détaillées comptent, en sachant qu'il limite l'accès aux sons à la bibliothèque musicale commerciale. Dans les deux cas, une adresse e-mail qu'on relève, pas celle de 2019.",
+      "common_fail": "Compte personnel sur Instagram, donc pas de statistiques ni de bouton de contact. Sur TikTok, un compte entreprise ouvert sans savoir qu'une bonne partie des sons tendance ne sont plus utilisables."
+    },
+    {
+      "id": "activite_recente",
+      "points": 10,
+      "full_marks": "Instagram : une publication dans les sept derniers jours. TikTok : une publication dans les trois derniers jours, le rythme attendu y est plus élevé. Sur les deux, des réponses aux commentaires de la dernière publication. Un compte dont la dernière vidéo date de mars a l'air fermé.",
+      "common_fail": "Un trou de cinq semaines, ou un mur de commentaires sans réponse."
+    },
+    {
+      "id": "presence_story",
+      "points": 6,
+      "full_marks": "Instagram : une story en ligne maintenant, ou au moins la plupart des jours. C'est la différence entre un profil et une personne. TikTok : les stories pèsent moins ; une story, un LIVE ou une réponse vidéo à un commentaire dans les 48 dernières heures vaut la note pleine.",
+      "common_fail": "Jamais d'anneau de story sur Instagram, aucun signe de vie entre deux vidéos sur TikTok."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "reels-tiktok-fr",
+  "description": "Pack de skills Reels + TikTok en français",
+  "owner": {
+    "name": "reels-tiktok-fr"
+  },
+  "plugins": [
+    {
+      "name": "reels-tiktok-fr",
+      "description": "14 skills en français pour Instagram Reels et TikTok, avec voix off locale gratuite.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

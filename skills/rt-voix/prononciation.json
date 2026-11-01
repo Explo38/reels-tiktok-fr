@@ -1,0 +1,20 @@
+{
+  "_note": "Mot tel qu'écrit -> mot tel qu'il doit être lu. Écoute la voix off et ajoute ici chaque mot mal prononcé (marque, sigle, anglicisme). Copie ce fichier dans ~/.claude/reels-tiktok/prononciation.json pour ta version perso : elle passe avant celle-ci.",
+  "CV": "cé vé",
+  "RH": "erre ache",
+  "CDI": "cé dé i",
+  "CDD": "cé dé dé",
+  "BTS": "bé té esse",
+  "IA": "i a",
+  "UX": "u ix",
+  "UI": "u i",
+  "SaaS": "sasse",
+  "LinkedIn": "linkédine",
+  "TikTok": "tik tok",
+  "Insta": "insta",
+  "DM": "dé emme",
+  "e-mail": "mail",
+  "etc.": "et cetera",
+  "vs": "contre",
+  "vs.": "contre"
+}
